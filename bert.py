@@ -20,7 +20,7 @@ tokenizer = BertTokenizer.from_pretrained(bert_model_dir)
 config = BertConfig.from_pretrained(bert_model_dir + '/bert_config.json')
 model = BertModel.from_pretrained(bert_model_dir, config=config).to('cuda' if torch.cuda.is_available() else 'cpu')
 print(model)
-
+# 测试一下
 
 def bert_embed(text, max_length=256):
     # 对文本进行编码，并限制最大长度
